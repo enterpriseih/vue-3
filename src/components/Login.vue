@@ -1,6 +1,7 @@
 <template>
   <div class="page">
-    <div></div>
+    <div @click="login">登录</div>
+    <div @click="reg">注册</div>
   </div>
 </template>
 
@@ -8,13 +9,19 @@
 export default {
   name: '',
   components: {},
-  data() {
-    return {
-
+  data () {
+    return {}
+  },
+  methods: {
+    login () {
+      this.$router.push('/home')
+    },
+    reg () {
+      this.$router.push('/home/user')
     }
   }
 }
 </script>
 
-<style scoped lang="stylus">
+<style scoped >
 </style>

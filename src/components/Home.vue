@@ -1,9 +1,13 @@
 <template>
   <div class="page">
-    <router-view />
+    <router-view/>
     <ul>
-      <li><router-link :to="{name: 'List'}"></router-link></li>
-      <li><router-link :to="{name: 'User'}"></router-link></li>
+      <li>
+        <router-link :to="{name: 'list'}">新闻列表</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'user'}">用户信息</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -12,13 +16,11 @@
 export default {
   name: '',
   components: {},
-  data() {
-    return {
-
-    }
+  data () {
+    return {}
   }
 }
 </script>
 
-<style scoped lang="stylus">
+<style scoped >
 </style>

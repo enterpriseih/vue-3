@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/Login.vue'
-import Home from '@/components/Home.vue'
+import Login from '../components/Login.vue'
+import Home from '../components/Home.vue'
 
 Vue.use(Router)
 
@@ -13,20 +13,25 @@ export default new Router({
       component: Login
     },
     {
-      path: '/Home',
-      name: 'Home',
+      path: '/home',
+      name: 'home',
       component: Home,
-      children:[
+      children: [
         {
-          path: 'List',
-          name: 'List',
-          component: () => import( /* webpackChunkName: "List" */ '.components/List.vue')
+          path: 'list',
+          name: 'list',
+          component: () => import(/* webpackChunkName: "list" */ '../components/List.vue')
         }, {
-          path: 'User',
-          name: 'User',
-          component: () => import( /* webpackChunkName: "User" */ '.components/User.vue')
-        },
+          path: 'user',
+          name: 'user',
+          component: () => import(/* webpackChunkName: "user" */ '../components/User.vue')
+        }
       ]
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: () => import(/* webpackChunkName: "user" */ '../components/User.vue')
     }
   ]
 })

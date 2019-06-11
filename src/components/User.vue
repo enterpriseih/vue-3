@@ -1,6 +1,10 @@
 <template>
-  <div class="page">
-
+  <div>
+    <ul>
+      <li>
+        用户信息
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -8,13 +12,11 @@
 export default {
   name: '',
   components: {},
-  data() {
-    return {
-
-    }
+  data () {
+    return {}
   }
 }
 </script>
 
-<style scoped lang="stylus">
+<style scoped >
 </style>

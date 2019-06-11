@@ -1,20 +1,22 @@
 <template>
-  <div class="page">
-
-  </div>
+<div>
+  <ul>
+    <li>
+      新闻列表
+    </li>
+  </ul>
+</div>
 </template>
 
 <script>
 export default {
   name: '',
   components: {},
-  data() {
-    return {
-
-    }
+  data () {
+    return {}
   }
 }
 </script>
 
-<style scoped lang="stylus">
+<style scoped >
 </style>
