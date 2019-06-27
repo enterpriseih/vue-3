@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '../components/Login.vue'
-import Home from '../components/Home.vue'
+import Title from '../components/Title.vue'
 
 Vue.use(Router)
 
@@ -9,29 +8,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home,
+      name: Title,
+      component: Title,
       children: [
         {
-          path: 'list',
-          name: 'list',
-          component: () => import(/* webpackChunkName: "list" */ '../components/List.vue')
+          path: '/home',
+          name: 'home',
+          component: () => import(/* webpackChunkName: "Home" */ '../components/Home.vue')
         }, {
-          path: 'user',
-          name: 'user',
-          component: () => import(/* webpackChunkName: "user" */ '../components/User.vue')
+          path: '/login',
+          name: 'login',
+          component: () => import(/* webpackChunkName: "Login" */ '../components/Login.vue')
+        }, {
+          path: '/sign',
+          name: 'sign',
+          component: () => import(/* webpackChunkName: "Sign" */ '../components/Sign.vue')
         }
       ]
-    },
-    {
-      path: '/add',
-      name: 'add',
-      component: () => import(/* webpackChunkName: "user" */ '../components/User.vue')
     }
   ]
 })

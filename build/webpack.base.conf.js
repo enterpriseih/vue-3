@@ -36,6 +36,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'bootstrap':resolve('src/assets/bootstrap'),
     }
   },
   module: {
@@ -74,6 +75,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test:/\.(css|styl)$/,
+        loader: 'style-loader!css-loader!stylus-loader',
+        include: ['node build/dev-server.js']
       }
     ]
   },
