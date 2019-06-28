@@ -45,12 +45,12 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../docs/index.html'),  // ../dist/index.html 改为 ../docs/index.html
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../docs'),  // ../dist 改为 ../docs
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: './',  // /改为 ./
 
     /**
      * Source Maps
