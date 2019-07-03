@@ -2,18 +2,21 @@
   <div class="page">
     <div class="flex-center">
       <div class="input_content">
-        <el-input
-          placeholder="Enter your username"
-          v-model="userInfo.username"
-        ></el-input>
+        <el-input placeholder="Enter your username"
+                  v-model="userInfo.username"></el-input>
       </div>
     </div>
     <div class="flex-center">
       <div class="input_content">
-        <el-input
-          placeholder="Enter your password"
-          v-model="userInfo.password"
-        ></el-input>
+        <el-input placeholder="Enter your password"
+                  v-model="userInfo.password"></el-input>
+      </div>
+    </div>
+    <div class="flex-center"
+         v-show="isSign">
+      <div class="input_content">
+        <el-input placeholder="Enter your password again"
+                  v-model="userInfo.password2"></el-input>
       </div>
     </div>
   </div>
@@ -23,6 +26,9 @@
 export default {
   name: '',
   components: {},
+  props: [
+    'isSign'
+  ],
   data () {
     return {
       userInfo: {
