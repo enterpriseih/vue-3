@@ -2,22 +2,25 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import routes from './router'
 import ElementUI from 'element-ui'
+import VueRouter from 'vue-router'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/assets/base.styl'
+import header from './components/header'
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(VueRouter)
+Vue.component('f-header', header)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  // store,
-  components: {
-    App
-  },
-  template: '<App/>'
+const router = new VueRouter({
+  routes,
+  mode: 'history'
 })
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

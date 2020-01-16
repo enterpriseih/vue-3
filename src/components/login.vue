@@ -10,7 +10,7 @@
 
 <script>
 
-import userLogin from './UserLogin.vue'
+import userLogin from './user-login.vue'
 
 export default {
   name: '',
