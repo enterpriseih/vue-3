@@ -1,6 +1,7 @@
 <template>
-  <div class="page">
-    <h2>Get a Free Chuck Norrid Quote</h2>
+  <div class="page flex-center">
+    <div class="detail-card">
+    </div>
   </div>
 </template>
 
@@ -14,5 +15,10 @@ export default {
 }
 </script>
 
-<style scoped >
+<style scoped lang="stylus">
+  .detail-card
+    width 600px
+    height 300px
+    margin-top 40px
+    background-color white
 </style>
