@@ -17,12 +17,12 @@ Vue.use(VueRouter)
 Vue.component('f-header', header)
 
 const router = new VueRouter({
-  routes,
-  mode: 'history'
+    routes,
+    mode: 'history'
 })
 
 new Vue({
-  router,
-  i18n,
-  render: h => h(App)
+    router,
+    i18n,
+    render: h => h(App)
 }).$mount('#app')

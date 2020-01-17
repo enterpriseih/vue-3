@@ -9,15 +9,15 @@ import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 Vue.use(VueI18n)
 
 const messages = {
-  en: Object.assign(en, enLocale),
-  zh: Object.assign(zh, zhLocale)
+    en: Object.assign(en, enLocale),
+    zh: Object.assign(zh, zhLocale)
 }
 
 console.log(messages.zh)
 
 const i18n = new VueI18n({
-  locale: localStorage.getItem('locale') || 'zh',
-  messages
+    locale: localStorage.getItem('locale') || 'zh',
+    messages
 })
 
 locale.i18n((key, value) => i18n.t(key, value)) //  为了实现element插件的多语言切换

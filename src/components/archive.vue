@@ -3,9 +3,9 @@
 </template>
 
 <script>
-export default {
-  name: 'archive'
-}
+    export default {
+        name: 'archive'
+    }
 </script>
 
 <style scoped>
