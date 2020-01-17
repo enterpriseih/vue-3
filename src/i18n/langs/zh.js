@@ -4,7 +4,7 @@ module.exports = {
     archive: '归档',
     about: '关于',
     language: '语言',
-    chinaese: '中文',
+    chinese: '中文',
     english: 'English'
   },
   home: {
