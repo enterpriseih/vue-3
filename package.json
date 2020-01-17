@@ -17,6 +17,7 @@
     "element-ui": "^2.10.0",
     "popper.js": "^1.15.0",
     "vue": "^2.5.2",
+    "vue-i18n": "^8.15.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

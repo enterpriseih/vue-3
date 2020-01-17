@@ -8,6 +8,7 @@ import VueRouter from 'vue-router'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../src/assets/base.styl'
 import header from './components/header'
+import i18n from './i18n/i18n'
 
 Vue.config.productionTip = false
 
@@ -22,5 +23,6 @@ const router = new VueRouter({
 
 new Vue({
   router,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

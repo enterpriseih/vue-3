@@ -1,14 +1,13 @@
 import home from '../components/home.vue'
 import login from '../components/login.vue'
 import sign from '../components/sign.vue'
-import header from '../components/header'
 import about from '../components/about'
 import archive from '../components/archive'
 
 const routes = [
   {
     path: '/',
-    component: header
+    component: home
   },
   {
     path: '/home',
